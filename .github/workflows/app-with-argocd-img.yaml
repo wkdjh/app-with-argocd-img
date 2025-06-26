@@ -2,11 +2,11 @@ name: App With Github Actions with ArgoCD
 
 on:
   # workflow_dispatch
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'manifest/**'
+  #push:
+  #  branches:
+  #    - main
+  #  paths-ignore:
+  #    - 'manifest/**'
 
 jobs:
   ci:
