@@ -1,6 +1,0 @@
-resources:
-  - argocd-app.yaml
-images:
-  - name: wkdjh10/app-with-argocd-img
-    newName: wkdjh10/app-with-argocd-img
-    newTag: "d0cf2e0"
