@@ -4,4 +4,4 @@ resources:
 images:
   - name: nginx
     newName: wkdjh10/app-with-argocd-img
-    newTag: "d0cf2e0"
+    newTag: "8ce0b17"
