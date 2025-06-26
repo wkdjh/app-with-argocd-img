@@ -1,5 +1,7 @@
 resources:
   - argocd-app.yaml
+  - argocd-img-deployment.yaml
+  - argocd-img-service.yaml
 images:
   - name: nginx
     newName: wkdjh10/app-with-argocd-img
