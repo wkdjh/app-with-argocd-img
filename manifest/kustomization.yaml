@@ -4,4 +4,4 @@ resources:
 images:
   - name: nginx
     newName: nginx
-    newTag: "1.23"
+    newTag: "1.25"
