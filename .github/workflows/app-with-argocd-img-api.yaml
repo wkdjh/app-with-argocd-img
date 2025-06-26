@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        repository: wkdjh/app-with-argocd-img
+        # repository: wkdjh/app-with-argocd-img
         ref: main
         token: ${{ secrets.GH_TOKEN }}
         
@@ -68,7 +68,7 @@ jobs:
     
     - name: Set up Image
       run: |
-        sed -i "s%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:[A-z0-9]*%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.SHORT_SHA }}%" ./manifest/argocd-app.yaml
+        sed -i "s%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:[A-z0-9]*%image: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}:${{ env.SHORT_SHA }}%" ./manifest/argocd-img-api-deployment.yaml
 
     - name: Commit and push changes
       run: |
