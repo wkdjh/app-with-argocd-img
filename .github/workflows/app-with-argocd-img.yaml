@@ -2,7 +2,11 @@ name: App With Github Actions with ArgoCD
 
 on:
   # workflow_dispatch
-  push
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - './manifest/**'
 
 jobs:
   ci:
@@ -69,7 +73,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        repository: ${{ secrets.GH_USERNAME }}/${{ secrets.GH_REPOSITORY }}
+        # repository: ${{ secrets.GH_USERNAME }}/${{ secrets.GH_REPOSITORY }}
         ref: main
         token: ${{ secrets.GH_TOKEN }}
         
